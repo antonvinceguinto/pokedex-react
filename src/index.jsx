@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { PokemonProvider } from './services/pokemon_context_api';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
 root.render(<PokemonProvider><App /></PokemonProvider>);
 
 // If you want to start measuring performance in your app, pass a function

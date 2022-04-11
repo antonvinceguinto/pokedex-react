@@ -18,12 +18,11 @@ export function PokemonProvider({ children }) {
     setCurrPokemonIndex(selectedPokemonIndex);
   };
 
-  const fetchPokemons = async () => {
-    const res = await fetchPokemonList();
-    setPokemonList(res);
-  };
-
   useEffect(() => {
+    const fetchPokemons = async () => {
+      const res = await fetchPokemonList();
+      setPokemonList(res);
+    };
     fetchPokemons();
   }, []);
 
